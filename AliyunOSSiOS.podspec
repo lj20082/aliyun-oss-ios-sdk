@@ -29,5 +29,5 @@ Pod::Spec.new do |s|
   s.osx.frameworks = 'SystemConfiguration','CoreTelephony'
 
   s.library   = 'resolv'
-
+  s.dependency 'Bugly', '~> 2.5.0'
 end
