@@ -8,6 +8,7 @@
 
 #import "OSSLog.h"
 #import "OSSUtil.h"
+#import "OSSBuglyLogger.h"
 
 @implementation OSSLog
 + (void)enableLog {
@@ -26,6 +27,12 @@
 
 + (BOOL)isLogEnable {
     return isEnable;
+}
+
++ (void)enableBuglyLog{
+    isEnable = YES;
+    [OSSDDLog removeAllLoggers];
+    [OSSDDLog addLogger:[OSSBuglyLogger sharedInstance]];
 }
 
 @end

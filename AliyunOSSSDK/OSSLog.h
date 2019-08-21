@@ -51,4 +51,5 @@ static BOOL isEnable;
 + (void)enableLog;
 + (void)disableLog;
 + (BOOL)isLogEnable;
++ (void)enableBuglyLog;
 @end
